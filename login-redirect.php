@@ -4,8 +4,8 @@ Plugin Name: WPUF login redirect
 Plugin URI: https://github.com/nayemDevs/Login-redirect-for-WPUF
 Description: Login redirect for Wp user frontend
 Version: 0.1
-Author: Sk, Nayeem
-Author URI: shaikat.me
+Author: Sk,Nayeem
+Author URI: https://github.com/nayemDevs
 License: GPL2
 */
 
@@ -19,7 +19,7 @@ function wlr_login_redirect($redirect){
 add_filter( 'wpuf_options_others', 'wlr_menu_option');
 
 function wlr_menu_option( $settings_fields ){
-	$pages = wpuf_get_pages();
+	 $pages = wpuf_get_pages();
 	 $settings_fields[] =  array(
         'name'    => 'page_url',
         'label'   => __( 'Insert your URL ', 'wpuf' ),
