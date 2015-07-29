@@ -5,7 +5,7 @@ Plugin URI: https://github.com/nayemDevs/Login-redirect-for-WPUF
 Description: Login redirect for Wp user frontend
 Version: 0.1
 Author: Sk,Nayeem
-Author URI: https://github.com/nayemDevs
+Author URI: https://twitter.com/nayemDevs
 License: GPL2
 */
 
