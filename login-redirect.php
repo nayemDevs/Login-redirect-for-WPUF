@@ -9,26 +9,27 @@ Author URI:
 License: none
 */
 
-    add_filter('wpuf_login_redirect' , 'login_redirect');
+add_filter('wpuf_login_redirect' , 'wlr_login_redirect');
 
-        function login_redirect($redirect){
-                $redirect = home_url( '/get_option( 'menu_option' );' );
-                return $redirect;
-        }
+function wlr_login_redirect($redirect){
+        $redirect = home_url( '/' . wpuf_get_option( 'page_url', 'wpuf_general' ) );
+        return $redirect;
+}
 
-    add_filter( 'wpuf_options_others', 'menu_option');
+add_filter( 'wpuf_options_others', 'wlr_menu_option');
 
-    function menu_option( $settings_fields ){
+function wlr_menu_option( $settings_fields ){
 
-    	 $settings_fields =  array(
-                'name'    => 'page_url',
-                'label'   => __( 'Insert your URL ', 'wpuf' ),
-                'desc'    => __( 'Insert your URL to redirect user after login', 'wpuf' ),
-                'type'    => 'checkbox',
-                'default' => 'on'
-            ),
+	 $settings_fields =  array(
+            'name'    => 'page_url',
+            'label'   => __( 'Insert your URL ', 'wpuf' ),
+            'desc'    => __( 'Insert your URL to redirect user after login', 'wpuf' ),
+            'type'    => 'text',
+            'default' => 'dashboard'
+        ),
 
-   }
+}
 
 
 ?>
+
