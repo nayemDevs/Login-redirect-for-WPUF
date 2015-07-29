@@ -22,8 +22,8 @@ function wlr_menu_option( $settings_fields ){
 	 $pages = wpuf_get_pages();
 	 $settings_fields[] =  array(
         'name'    => 'page_url',
-        'label'   => __( 'Insert your URL ', 'wpuf' ),
-        'desc'    => __( 'Insert your URL to redirect user after login', 'wpuf' ),
+        'label'   => __( 'Select redirect page ', 'wpuf' ),
+        'desc'    => __( 'Select the page to redirect user after login', 'wpuf' ),
         'type'    => 'select',
         'options' => $pages
     );
